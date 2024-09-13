@@ -2,6 +2,7 @@ namespace ucu;
 
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Enano
 {
@@ -21,8 +22,9 @@ public class Enano
     {
         get { return VidaInicial; }
     }
-    public List<Item> ItemsList { get; set; }  // Lista de items que el enano posee
-    public int Fuerza { get; set; } // Fuerza base del enano
+
+    private ArrayList ItemsList;  // Lista de items que el enano posee
+    
 
     // Constructor de la clase Enano
     public Enano(string nombre, int vida, int fuerza)
@@ -30,8 +32,7 @@ public class Enano
         Nombre = nombre; // Asigna el nombre
         Vida = vida; // Asigna la vida
         VidaInicial = vida;
-        Fuerza = fuerza; // Asigna la fuerza
-        ItemsList = new List<Item>(); // Inicializa la lista de items vacía
+        ItemsList = new ArrayList(); // Inicializa la lista de items vacía
     }
 
     // Método para agregar un item al enano
@@ -91,11 +92,10 @@ public class Enano
     public int getAtaqueTotal()
     {
         int ataqueTotal = 0;
-        foreach (var item in ItemsList) // Itera sobre los items del enano
+        foreach (Item item in ItemsList) // Itera sobre los items del enano
         {
             ataqueTotal += item.ataque; // Suma el valor de ataque de cada item
         }
-        ataqueTotal += Fuerza; // Añade la fuerza del enano al ataque total
         return ataqueTotal; // Retorna el ataque total
     }
 
@@ -103,16 +103,12 @@ public class Enano
     public int getDefensaTotal()
     {
         int defensaTotal = 0;
-        foreach (var item in ItemsList) // Itera sobre los items del enano
+        foreach (Item item in ItemsList) // Itera sobre los items del enano
         {
             defensaTotal += item.defensa; // Suma el valor de defensa de cada item
         }
         return defensaTotal; // Retorna la defensa total
     }
 
-    // Método que describe la acción de luchar del enano
-    public string Luchar()
-    {
-        return $"{Nombre} lucha con una fuerza de {Fuerza}"; // Retorna un mensaje indicando la fuerza de lucha
-    }
+    
 }

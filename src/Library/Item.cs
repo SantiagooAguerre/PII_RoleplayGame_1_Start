@@ -21,10 +21,10 @@ public class Item
 
     private string Tipo;
 
-    private object Portador;
+    //private object Portador;
 
     // Constructor de la clase que inicializa las propiedades con los valores recibidos.
-    public Item(string nombre, int ataque, int defensa, string tipo, object portador)
+    public Item(string nombre, int ataque, int defensa, string tipo/*, object portador*/)
     {
         // Asigna el valor del parámetro 'nombre' a la propiedad 'Nombre'.
         Nombre = nombre;
@@ -37,14 +37,14 @@ public class Item
 
         Tipo = tipo;
 
-        Portador = portador;
+        //Portador = portador;
     }
 
     // Método sobrescrito que devuelve una representación en texto del objeto.
     public override string ToString()
     {
         // Retorna una cadena con el formato "Nombre: Ataque X, Defensa Y".
-        return $"{Nombre}: ,Tipo {Tipo}, Ataque {Ataque}, Defensa {Defensa}. Puede usarlo: {Portador}";
+        return $"{Nombre}: ,Tipo {Tipo}, Ataque {Ataque}, Defensa {Defensa}.";
     }
 }
     
