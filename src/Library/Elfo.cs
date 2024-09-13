@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-public class Enano
+public class Elfo
 {
     // Propiedades del enano
     private string Nombre { get; set; } // Nombre del enano
@@ -27,7 +27,7 @@ public class Enano
     
 
     // Constructor de la clase Enano
-    public Enano(string nombre, int vida)
+    public Elfo(string nombre, int vida)
     {
         Nombre = nombre; // Asigna el nombre
         Vida = vida; // Asigna la vida

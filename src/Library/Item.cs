@@ -40,11 +40,6 @@ public class Item
         //Portador = portador;
     }
 
-    // Método sobrescrito que devuelve una representación en texto del objeto.
-    public override string ToString()
-    {
-        // Retorna una cadena con el formato "Nombre: Ataque X, Defensa Y".
-        return $"{Nombre}: ,Tipo {Tipo}, Ataque {Ataque}, Defensa {Defensa}.";
-    }
+    
 }
     

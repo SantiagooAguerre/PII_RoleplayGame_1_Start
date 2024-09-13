@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-public class Enano
+public class Mago
 {
     // Propiedades del enano
     private string Nombre { get; set; } // Nombre del enano
@@ -23,15 +23,18 @@ public class Enano
         get { return VidaInicial; }
     }
 
+    private int Mana;
+
     private ArrayList ItemsList;  // Lista de items que el enano posee
     
 
     // Constructor de la clase Enano
-    public Enano(string nombre, int vida)
+    public Mago(string nombre, int vida,int mana)
     {
         Nombre = nombre; // Asigna el nombre
         Vida = vida; // Asigna la vida
         VidaInicial = vida;
+        Mana = mana;
         ItemsList = new ArrayList(); // Inicializa la lista de items vacía
     }
 
