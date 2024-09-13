@@ -1,16 +1,30 @@
 public class Item
 {
     // Propiedad pública para almacenar el nombre del ítem.
-    public string Nombre { get; set; }
+    private string Nombre;
 
     // Propiedad pública para almacenar el valor de ataque del ítem.
-    public int Ataque { get; set; }
+    private int Ataque;
+
+    public int ataque
+    {
+        get { return Ataque; }
+    }
 
     // Propiedad pública para almacenar el valor de defensa del ítem.
-    public int Defensa { get; set; }
+    private int Defensa;
+
+    public int defensa
+    {
+        get { return Defensa; }
+    }
+
+    private string Tipo;
+
+    private object Portador;
 
     // Constructor de la clase que inicializa las propiedades con los valores recibidos.
-    public Item(string nombre, int ataque, int defensa)
+    public Item(string nombre, int ataque, int defensa, string tipo, object portador)
     {
         // Asigna el valor del parámetro 'nombre' a la propiedad 'Nombre'.
         Nombre = nombre;
@@ -20,13 +34,17 @@ public class Item
 
         // Asigna el valor del parámetro 'defensa' a la propiedad 'Defensa'.
         Defensa = defensa;
+
+        Tipo = tipo;
+
+        Portador = portador;
     }
 
     // Método sobrescrito que devuelve una representación en texto del objeto.
     public override string ToString()
     {
         // Retorna una cadena con el formato "Nombre: Ataque X, Defensa Y".
-        return $"{Nombre}: Ataque {Ataque}, Defensa {Defensa}";
+        return $"{Nombre}: ,Tipo {Tipo}, Ataque {Ataque}, Defensa {Defensa}. Puede usarlo: {Portador}";
     }
 }
     

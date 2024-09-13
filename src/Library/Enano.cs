@@ -41,7 +41,7 @@ public class Enano
         int ataqueTotal = 0;
         foreach (var item in Items) // Itera sobre los items del enano
         {
-            ataqueTotal += item.Ataque; // Suma el valor de ataque de cada item
+            ataqueTotal += item.ataque; // Suma el valor de ataque de cada item
         }
         ataqueTotal += Fuerza; // Añade la fuerza del enano al ataque total
         return ataqueTotal; // Retorna el ataque total
@@ -53,7 +53,7 @@ public class Enano
         int defensaTotal = 0;
         foreach (var item in Items) // Itera sobre los items del enano
         {
-            defensaTotal += item.Defensa; // Suma el valor de defensa de cada item
+            defensaTotal += item.defensa; // Suma el valor de defensa de cada item
         }
         return defensaTotal; // Retorna la defensa total
     }
