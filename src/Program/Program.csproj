@@ -10,9 +10,4 @@
     <ProjectReference Include="..\Library\Library.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Enano.cs" />
-    <Compile Remove="Item.cs" />
-  </ItemGroup>
-
 </Project>
