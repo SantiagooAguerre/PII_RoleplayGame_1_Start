@@ -1,4 +1,3 @@
-﻿
 namespace roleplay
 {
     class Program
