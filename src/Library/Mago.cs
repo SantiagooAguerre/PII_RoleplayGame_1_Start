@@ -15,10 +15,10 @@ namespace roleplay
         public Mago(string nombre)
         {
             Nombre = nombre;
-            Vida = 150;
-            Ataque = 20;
-            Mana = 100;
-            ManaInicial = 100;
+            Vida = 100;
+            Ataque = 30;
+            Mana = 150;
+            ManaInicial = 150;
         }
 
         public void AgregarHabilidad(Habilidades habilidades)
